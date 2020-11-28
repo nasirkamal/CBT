@@ -32,7 +32,7 @@ class RawFio(Benchmark):
         self.ioengine = config.get('ioengine', 'libaio')
         self.op_size = config.get('op_size', 4194304)
         self.vol_size = config.get('vol_size', 65536) * 0.9
-        self.fio_cmd = config.get('fio_cmd', 'sudo /usr/bin/fio')
+        self.fio_cmd = config.get('fio_cmd', 'sudo /usr/local/bin/fio')
         # FIXME there are too many permutations, need to put results in SQLITE3
         self.run_dir = '%s/raw_ra-%08d/op_size-%08d/concurrent_procs-%03d/iodepth-%03d/%s' % (self.run_dir, int(self.osd_ra), int(self.op_size), int(self.total_procs), int(self.iodepth), self.mode)
         self.out_dir = '%s/raw_ra-%08d/op_size-%08d/concurrent_procs-%03d/iodepth-%03d/%s' % (self.archive_dir, int(self.osd_ra), int(self.op_size), int(self.total_procs), int(self.iodepth), self.mode)

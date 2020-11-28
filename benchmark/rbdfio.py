@@ -16,7 +16,7 @@ class RbdFio(Benchmark):
         super(RbdFio, self).__init__(archive_dir, cluster, config)
 
         # FIXME there are too many permutations, need to put results in SQLITE3
-        self.cmd_path = config.get('cmd_path', '/usr/bin/fio')
+        self.cmd_path = config.get('cmd_path', '/usr/local/bin/fio')
         self.pool_profile = config.get('pool_profile', 'default')
 
         self.concurrent_procs = config.get('concurrent_procs', 1)

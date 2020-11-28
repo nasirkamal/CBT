@@ -32,7 +32,7 @@ benchmarks:
       # What is the filesystem
       client_fs: xfs
       concurrent_procs: 1
-      fio_cmd: '/usr/bin/fio'
+      fio_cmd: '/usr/local/bin/fio'
       block_devices: [/dev/vdb]
 #      block_devices: [/dev/sda, /dev/sdb, /dev/sdc, /dev/sdd, /dev/sde, /dev/sdf, /dev/sdg, /dev/sdh, /dev/sdi, /dev/sdj, /dev/sdk, /dev/sdl, /dev/sdm, /dev/sdn]
 

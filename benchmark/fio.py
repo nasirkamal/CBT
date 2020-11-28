@@ -16,7 +16,7 @@ class Fio(Benchmark):
         super(Fio, self).__init__(archive_dir, cluster, config)
 
         # FIXME there are too many permutations, need to put results in SQLITE3
-        self.cmd_path = config.get('cmd_path', '/usr/bin/fio')
+        self.cmd_path = config.get('cmd_path', '/usr/local/bin/fio')
         self.direct = config.get('direct', 1)
         self.time = config.get('time', None)
         self.time_based = bool(config.get('time_based', False))
